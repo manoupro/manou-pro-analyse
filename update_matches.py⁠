@@ -1,0 +1,16 @@
+import os
+import datetime
+
+print("--- MANOU PRO ANALYSE : Le script Python est bien réveillé ! ---")
+
+today = datetime.date.today().strftime('%Y-%m-%d')
+print(f"Date du jour exécutée par le robot : {today}")
+
+try:
+    with open("index.html", "r", encoding="utf-8") as f:
+        content = f.read()
+    print("Fichier index.html bien lu par le script. Tout est propre !")
+except Exception as e:
+    print(f"Erreur : {e}")
+
+print("--- Fin du traitement de mise à jour ---")
